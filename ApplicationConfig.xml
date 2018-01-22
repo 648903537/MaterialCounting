@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScreenPrinter>
+  <ScannerParameters>
+    <SerialPort>COM5</SerialPort>
+    <BaudRate>9600</BaudRate>
+    <Parity>0</Parity>
+    <StopBits>1</StopBits>
+    <DataBits>8</DataBits>
+    <NewLineSymbol>\r</NewLineSymbol>
+  </ScannerParameters>
+  <OutputCOMPort>
+    <OutSerialPort>COM1</OutSerialPort>
+    <OutBaudRate>9600</OutBaudRate>
+    <OutParity>0</OutParity>
+    <OutStopBits>1</OutStopBits>
+    <OutDataBits>8</OutDataBits>
+  </OutputCOMPort>
+  <GlobalParameters>
+    <!--English = "US";SimplifiedChinese = "ZHS";TraditionalChinese = "ZHT";-->
+    <Language>ZHS</Language>
+    <DLExtractPattern>^\d{10}\S{2}\d{2}[L|R]\d{1,2}$|^\d{12}[L|R]\d{1,2}$</DLExtractPattern>
+    <!--^SN\S*$|^\d{17}$-->
+    <MBNExtractPattern>^X\S*$</MBNExtractPattern>
+    <!--^(MBN)\S*$;[^(MBN)]*$-->
+    <EquipmentExtractPattern>^EQ\S.*$</EquipmentExtractPattern>
+    <TrayExtractPattern>^L\S.*$</TrayExtractPattern>
+    <OpacityValue>70</OpacityValue>
+    <!-- 悬浮框的位置   1071,675-->
+    <LocationXY>1071|675</LocationXY>
+    <MDAPath>C:\GWM_Document</MDAPath>
+    <OutputEnter>1</OutputEnter>
+    <DataOutputInterface>COM</DataOutputInterface>
+    <!--SendKey or COM-->
+    <LogInRegular>^(\S.*);(\S.*)$</LogInRegular>
+    <LogInType>USB</LogInType>
+    <!--COM/USB-->
+    <CheckListFolder>D:\CheckList\</CheckListFolder>
+    <!--\\192.168.2.55\files\-->
+    <IsSelectWO>N</IsSelectWO>
+    <IsCheckList>Y</IsCheckList>
+    <IsMaterialSetup>N</IsMaterialSetup>
+    <IsEquipSetup>N</IsEquipSetup>
+
+    <YSLine>11</YSLine>
+    <!--YS-IH2882-->
+    <YSPos>8</YSPos>
+    <!--YS-IH2882-->
+    <ASCLine>2</ASCLine>
+    <!--ASC1000B-->
+    <ASCPos>8</ASCPos>
+    <!--ASC1000B-->
+    <IQTYPattern>^\d+[\.\d]*$</IQTYPattern>
+    <SelectMode>Manual input|ASC1000B|YS-IH2882</SelectMode>
+
+    <DataSleepTime>500</DataSleepTime>
+
+    <FilterByFileName>enable</FilterByFileName>
+    <!--enable/disable-->
+    <FileNamePattern>^\S{15} \S.*$</FileNamePattern>
+
+    <AUTH_TEAM></AUTH_TEAM>
+
+    <PORTAL_SERVER_CONNECT>172.17.1.5:50100</PORTAL_SERVER_CONNECT>
+  </GlobalParameters>
+</ScreenPrinter>
